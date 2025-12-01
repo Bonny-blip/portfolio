@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bonang Prescilla Leraisa-Mobile App Developer</title>
+  <meta name="description" content="Portfolio of Bonang Prescilla Leraisa - Mobile Computing student and mobile app developer. Projects, skills, services and contact." />
+  <meta name="author" content="Bonang Prescilla Leraisa" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #7c3aed;
+      --soft: #f5f7fb;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 12px;
+      color-scheme: light dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f7fbff 0%, #eef6ff 100%);
+      color:#0b1220; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;font-size:16px;
+    }
+
+    /* Container */
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;align-items:center;gap:12px}
+    .nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    .nav-link:hover{background:var(--glass);color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:30px 0}
+    .hero-card{background:white;padding:28px;border-radius:16px;box-shadow:0 6px 20px rgba(15,18,32,0.08)}
+    .intro h2{margin:0 0 10px 0;font-size:28px}
+    .intro p{margin:0 0 18px 0;color:var(--muted)}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.secondary{background:transparent;color:var(--accent);border:2px solid rgba(124,58,237,0.12)}
+
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .profile img{width:220px;height:220px;border-radius:14px;object-fit:cover;border:6px solid #fff;box-shadow:0 8px 30px rgba(12,18,33,0.08)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{background:#f1f5f9;padding:6px 10px;border-radius:999px;font-weight:600;color:#0b1220;font-size:13px}
+
+    /* Projects grid */
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+    .project{background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,33,0.06);display:flex;gap:14px}
+    .project img{width:160px;height:120px;border-radius:8px;object-fit:cover}
+    .project h3{margin:0;font-size:18px}
+    .project p{margin:6px 0;color:var(--muted);font-size:14px}
+    .stack{font-size:13px;color:var(--muted);margin-top:6px}
+
+    /* Services */
+    .services{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .service{flex:1 1 200px;background:white;padding:16px;border-radius:12px}
+    .service h4{margin:0}
+
+    /* About & Contact */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .card{background:white;padding:18px;border-radius:12px}
+
+    form input, form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef8;background:transparent}
+    form button{margin-top:8px;padding:12px 14px;border-radius:10px;border:none;background:var(--accent);color:white;font-weight:700}
+
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* subtle animations */
+    .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    /* Accessibility focus */
+    a:focus, button:focus, input:focus{outline:3px solid rgba(124,58,237,0.18);outline-offset:2px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade-up">
+      <div class="brand">
+        <div class="logo" aria-hidden>BP</div>
+        <div>
+          <h1>Bonang Prescilla Leraisa</h1>
+          <p>Final-year Mobile Computing student · Mobile App Developer</p>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-card fade-up">
+        <div class="intro">
+          <h2>Hi! I’m <strong>Bonang</strong>. I build mobile apps that help communities and small businesses.</h2>
+          <p>I design and develop cross-platform mobile solutions using Ionic/Angular and Flutter. My focus is agriculture, utilities and community systems that scale locally.</p>
+        </div>
+
+        <div class="cta" role="region" aria-label="Call to action">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="photos/cv.pdf" download>Download CV</a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted);font-size:14px">
+          <strong>Location:</strong> Maseru, Lesotho • <strong>Email:</strong> <a href="mailto:bonangleraisa@gmail.com">bonangleraisa@gmail.com</a>
+        </div>
+
+        <div style="margin-top:12px" class="skills" aria-hidden>
+          <span class="tag">Ionic</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Flutter</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Flask</span>
+          <span class="tag">API Design</span>
+        </div>
+      </div>
+
+      <aside class="profile fade-up" aria-label="Profile">
+        <img src="photos/image.png" alt="Portrait of Bonang Prescilla Leraisa" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'><rect width=\'100%\' height=\'100%\' fill=\'%23e6eef8\' /><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%237c3aed\' font-size=\'24\'>Photo</text></svg>'"/>
+
+        <div style="text-align:center">
+          <div style="font-weight:700">Final-year Mobile Computing Student</div>
+          <div style="color:var(--muted);font-size:14px">Passionate about mobile-first solutions for the Basotho market</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 style="margin-bottom:8px">Selected Projects</h2>
+      <p style="margin-top:0;color:var(--muted)">Real projects built with production-ready tooling and measurable impact.</p>
+
+      <div class="grid">
+        <article class="project fade-up" aria-labelledby="proj1">
+          <img src="photos/project1.png" alt="Agriculture App screenshot" loading="lazy">
+          <div>
+            <h3 id="proj1">Agriculture Support Mobile App</h3>
+            <p><strong>Problem:</strong> Smallholder farmers need timely weather, market prices and pest alerts.</p>
+            <p class="stack"><strong>Tech:</strong> Ionic / Angular · SQLite · Firebase · REST APIs</p>
+            <p class="stack"><strong>Impact:</strong> Weather alerts, crop guides and marketplace integration increased farmer engagement and informed decisions.</p>
+          </div>
+        </article>
+
+        <article class="project fade-up" aria-labelledby="proj2">
+          <img src="photos/project2.png" alt="Utility Alerts app screenshot" loading="lazy">
+          <div>
+            <h3 id="proj2">Utility Alert App</h3>
+            <p><strong>Description:</strong> Sends planned outage notifications to affected subscribers using SMS, email and web push.</p>
+            <p class="stack"><strong>Tech:</strong> Flask · Twilio · SQLite · Web Push API</p>
+            <p class="stack">Features: Location-based targeting, admin dashboard, retry/queue for reliable deliveries.</p>
+          </div>
+        </article>
+
+        <article class="project fade-up" aria-labelledby="proj3">
+          <img src="photos/project3.png" alt="Prototype screenshot" loading="lazy" onerror="this.style.display='none'">
+          <div>
+            <h3 id="proj3">Prototype: Community Errand App</h3>
+            <p>Minimal viable product for booking errands and deliveries for elderly and busy users with in-app payments and rating system.</p>
+            <p class="stack">Tech: React Native (prototype) · Ionic (production-ready) · Stripe integration</p>
+          </div>
+        </article>
+
+        <article class="project fade-up" aria-labelledby="proj4">
+          <img src="photos/project4.png" alt="More projects" loading="lazy" onerror="this.style.display='none'">
+          <div>
+            <h3 id="proj4">More projects & experiments</h3>
+            <p>Data-collection tools, rapid prototypes and open-source utilities — coming soon.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT + SERVICES -->
+    <section id="about" class="two-col">
+      <div class="card fade-up">
+        <h2>About Me</h2>
+        <p>I’m a final-year Mobile Computing student from Lesotho with a background in agriculture and hands-on experience building apps that solve local problems. I enjoy converting field research into practical features: offline-first sync, lightweight storage, and clear user flows for low-connectivity environments.</p>
+
+        <p>Highlights:</p>
+        <ul>
+          <li>Experience building cross-platform mobile apps (Ionic/Angular & Flutter)</li>
+          <li>Backend services with Flask and Firebase; message delivery with Twilio</li>
+          <li>Database design for SQLite and mobile-first UX</li>
+        </ul>
+      </div>
+
+      <div class="card fade-up">
+        <h2>Services</h2>
+        <div class="services">
+          <div class="service"><h4>Mobile App Development</h4><p>Cross-platform apps with offline support & local-first design.</p></div>
+          <div class="service"><h4>API & Backend</h4><p>Flask/Firebase backends, push notifications and integrations.</p></div>
+          <div class="service"><h4>Database Design</h4><p>SQLite, syncing strategies and migration plans.</p></div>
+          <div class="service"><h4>UI/UX Prototyping</h4><p>Wireframes, clickable prototypes and usability testing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <p style="color:var(--muted)">Send a message or download my CV and certificates below.</p>
+
+      <form id="contactForm" onsubmit="handleSubmit(event)" aria-label="Contact form">
+        <label class="sr-only" for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label class="sr-only" for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label class="sr-only" for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" href="photos/cv.pdf" download>Download CV</a>
+        <a class="btn secondary" href="photos/Transcript.pdf" download>Transcript</a>
+        <a class="btn secondary" href="photos/c1.pdf" download>Certificates</a>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted)">
+        <p>📧 <a href="mailto:bonangleraisa@gmail.com">bonangleraisa@gmail.com</a> &nbsp; • &nbsp; 📞 +266 62364757</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/bonang-leraisa" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Bonang Prescilla Leraisa — Built with care · Accessible · Mobile-first</p>
+    </footer>
+  </div>
+
+  <script>
+    // Simple contact form handler (client-side). Replace with your backend endpoint if available.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please complete all fields.');
+        return;
+      }
+      // For demo: show a toast and reset form. In production, POST to your API.
+      alert('Thanks ' + name + " — your message was sent (demo).\nI'll contact you at " + email + '.');
+      document.getElementById('contactForm').reset();
+    }
+
+    // Small animation trigger for elements with .fade-up
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{
+        el.style.animationDelay = (i * 0.08) + 's';
+      });
+    });
+
+    // Accessibility: simple keyboard shortcut (press 'c' to focus contact form)
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'c' && !e.ctrlKey && !e.metaKey && !e.altKey){
+        e.preventDefault();
+        document.getElementById('name').focus();
+      }
+    });
+  </script>
+</body>
+</html>
